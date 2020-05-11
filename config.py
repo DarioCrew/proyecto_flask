@@ -1,6 +1,6 @@
 class Config:
     SECRET_KEY = 'codigofacilito'
-
+# ETAPA DE DESARROLLO 
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'mysql://root:tritubot2018@localhost/project_web'
