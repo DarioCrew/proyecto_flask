@@ -16,10 +16,13 @@ class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql://root:tritubot2018@localhost/project_web_test'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     TEST = True
+class ProductionConfig(DevelopmentConfig):
+    DEBUG = True
 
-
+    
 config = {
     'development': DevelopmentConfig,
     'default': DevelopmentConfig,
-    'test': TestConfig
+    'test': TestConfig,
+    'production': ProductionConfig
 }
